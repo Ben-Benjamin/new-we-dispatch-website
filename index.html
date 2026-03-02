@@ -247,13 +247,17 @@ Reach out directly or submit the form below and our team will respond promptly.
 <p>📧 <a href="mailto:weresponddispatch@gmail.com">weresponddispatch@gmail.com</a></p>
 <p>📞 <a href="tel:+15722088582">+1 (572) 208-8582</a></p>
 </div>
-
-<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="#contact" style="max-width:700px;margin:auto;">
+<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="max-width:700px;margin:auto;" onsubmit="handleSubmit(event)">
   
   <input type="hidden" name="form-name" value="contact">
-   <p style="display:none">
+
+  <p style="display:none">
     <label>Don’t fill this out if you're human: <input name="bot-field"></label>
   </p>
+
+  <div id="success-message" style="display:none;text-align:center;margin-bottom:20px;color:#16a34a;font-weight:600;">
+    Thank you. Your inquiry has been received.
+  </div>
 
   <input type="text" name="name" placeholder="Full Name" required>
   
@@ -266,8 +270,6 @@ Reach out directly or submit the form below and our team will respond promptly.
   <button class="btn" type="submit">Submit Inquiry</button>
 
 </form>
-<div id="success-message" style="display:none;text-align:center;margin-bottom:20px;color:green;font-weight:600;">
-Thank you. Your inquiry has been received.
 </div>
 </section>
 
