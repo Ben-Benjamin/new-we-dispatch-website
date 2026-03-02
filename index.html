@@ -170,13 +170,6 @@ h2{
 }
 </style>
 </head>
-   <script>
-document.querySelector("form").addEventListener("submit", function() {
-  setTimeout(function() {
-    document.getElementById("success-message").style.display = "block";
-  }, 500);
-});
-</script>
 
 <body>
 
@@ -302,3 +295,40 @@ Reach out directly or submit the form below and our team will respond promptly.
 
 © 2026 WeDispatch | U.S. Dispatch Services
 </footer>
+   <script>
+function handleSubmit(event) {
+  event.preventDefault();
+  
+  const form = event.target;
+  const data = new FormData(form);
+
+  fetch("/", {
+    method: "POST",
+    body: data
+  })
+  .then(() => {
+    document.getElementById("success-message").style.display = "block";
+    form.reset();
+  })
+  .catch(() => {
+    alert("There was an issue submitting the form. Please try again.");
+  });
+}
+</script>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/69a60f43065c5f1c350d6286/1jioan8fq';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+</body>
+</html>
