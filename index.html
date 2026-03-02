@@ -148,6 +148,13 @@ h2{
 }
 </style>
 </head>
+   <script>
+document.querySelector("form").addEventListener("submit", function() {
+  setTimeout(function() {
+    document.getElementById("success-message").style.display = "block";
+  }, 500);
+});
+</script>
 
 <body>
 
@@ -241,9 +248,12 @@ Reach out directly or submit the form below and our team will respond promptly.
 <p>📞 <a href="tel:+15722088582">+1 (572) 208-8582</a></p>
 </div>
 
-<form name="contact" method="POST" data-netlify="true" style="max-width:700px;margin:auto;">
+<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="#contact" style="max-width:700px;margin:auto;">
   
   <input type="hidden" name="form-name" value="contact">
+   <p style="display:none">
+    <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+  </p>
 
   <input type="text" name="name" placeholder="Full Name" required>
   
@@ -256,7 +266,8 @@ Reach out directly or submit the form below and our team will respond promptly.
   <button class="btn" type="submit">Submit Inquiry</button>
 
 </form>
-
+<div id="success-message" style="display:none;text-align:center;margin-bottom:20px;color:green;font-weight:600;">
+Thank you. Your inquiry has been received.
 </div>
 </section>
 
