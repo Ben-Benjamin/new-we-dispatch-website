@@ -201,15 +201,32 @@ We operate as an extension of your company — delivering professional call hand
 <section id="contact" class="gray">
 <div class="container">
 <h2>Contact WeDispatch</h2>
-<p style="text-align:center;margin-bottom:40px;">
-Tell us about your business and dispatch needs. Our team will respond promptly.
-</p>
 
-<div style="display:flex;justify-content:center;">
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSezBXW4dI4qXpNNb38o7e0euMYp-9-NcntxiyFTeS97ccDd6A/viewform?embedded=true" width="640" height="1298" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<p style="text-align:center;max-width:700px;margin:0 auto 40px;">
+Have questions about our locksmith or HVAC dispatch services? 
+Reach out directly or submit the form below and our team will respond promptly.
+</p>
+<div style="text-align:center;margin-bottom:40px;font-size:18px;line-height:1.8;">
+<p>📧 <a href="mailto:weresponddispatch@gmail.com">weresponddispatch@gmail.com</a></p>
+<p>📞 <a href="tel:+15722088582">+1 (572) 208-8582</a></p>
 </div>
-<p>Email: weresponddispatch@gmail.com</p>
-<p>Phone: +1 (572) 208-8582</p>
+
+<form name="contact" method="POST" data-netlify="true" style="max-width:700px;margin:auto;">
+  
+  <input type="hidden" name="form-name" value="contact">
+
+  <input type="text" name="name" placeholder="Full Name" required>
+  
+  <input type="email" name="email" placeholder="Business Email" required>
+  
+  <input type="text" name="company" placeholder="Company Name">
+  
+  <textarea name="message" rows="5" placeholder="Tell us about your dispatch needs"></textarea>
+  
+  <button class="btn" type="submit">Submit Inquiry</button>
+
+</form>
+
 </div>
 </section>
 
